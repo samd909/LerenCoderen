@@ -1,0 +1,49 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Zorgt voor responsieve kolommen */
+    gap: 20px; /* Ruimte tussen de containers */
+    width: 100%;
+    max-width: 600px; /* Maximale breedte van de container */
+    padding: 20px;
+    height: 20%;
+}
+
+.javascriptcontainer,
+.laravelcontainer {
+    padding: 20px; 
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.laravelcontainer img {
+    max-width: 100%; 
+    height: auto; 
+    margin-bottom: 15px; 
+    border-radius: 5px;
+}
+
+
+.javascriptcontainer:hover,
+.laravelcontainer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
