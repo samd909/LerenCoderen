@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+
+  list-style: none;
+  font-family: "Maax-Regular";
+  text-decoration: none;
+  color: black;
+  cursor: auto;
+}
+
+$primary-white: #ffffff;
+$primary-blue: #00365e;
+$primary-pink: #dd0069;
+
+$background-light: #e5ebef;
+$background-med: #bfbfbf;
+$background-dark: #222222;
+
+$positive-color: #00b588;
+$negative-color: #b50000;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin img-center {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@font-face {
+  font-family: "Maax-Regular";
+  src: url(../fonts/maax-regular.woff2);
+}
+
+@font-face {
+  font-family: "Maax-Medium";
+  src: url(../fonts/maax-medium.woff2);
+}
+
+@font-face {
+  font-family: "Maax-Bold";
+  src: url(../fonts/maax-bold.woff2);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+
+  @include flex-center();
+
+  .card {
+    width: 30%;
+    height: 70%;
+
+    display: flex;
+    flex-direction: column;
+
+    header {
+      width: 100%;
+      height: 15%;
+      border-radius: 20px 20px 0 0;
+      background-color: #00365e;
+      color: white;
+      @include flex-center();
+      font-family: "Maax-Bold";
+    }
+
+    section {
+      width: 100%;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      background-color: aqua;
+
+      div {
+        width: 50%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      div:last-child {
+        margin-top: auto;
+      }
+    }
+
+    footer {
+      width: 100%;
+      height: 10%;
+      background-color: pink;
+    }
+  }
+}
