@@ -16,8 +16,8 @@ html, body {
     height: 20%;
 }
 
-.javascriptbutton,
-.laravelbutton {
+#javascriptbutton,
+#laravelbutton {
     padding: 20px; 
     background-color: #f0f0f0; 
     border: 1px solid #ccc; 
@@ -31,14 +31,14 @@ html, body {
     text-align: center;
 }
 
-.javascriptbutton img {
+#javascriptbutton img {
     max-width: 100%; 
     height: auto; 
     margin-bottom: 15px; 
     border-radius: 5px;
 }
 
-.laravelbutton img {
+#laravelbutton img {
     max-width: 100%; 
     height: auto; 
     margin-bottom: 15px; 
@@ -46,10 +46,14 @@ html, body {
 }
 
 
-.javascriptbutton:hover,
-.laravelbutton:hover {
+#javascriptbutton:hover{
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px #f7df1e;
+}
+
+#laravelbutton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px #f55247;
 }
 
 
