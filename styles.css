@@ -10,14 +10,14 @@ html, body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Zorgt voor responsieve kolommen */
     gap: 20px; /* Ruimte tussen de containers */
-    width: 100%;
+    width: 70%;
     max-width: 600px; /* Maximale breedte van de container */
     padding: 20px;
     height: 20%;
 }
 
-.javascriptcontainer,
-.laravelcontainer {
+.javascriptbutton,
+.laravelbutton {
     padding: 20px; 
     background-color: #f0f0f0; 
     border: 1px solid #ccc; 
@@ -31,7 +31,14 @@ html, body {
     text-align: center;
 }
 
-.laravelcontainer img {
+.javascriptbutton img {
+    max-width: 100%; 
+    height: auto; 
+    margin-bottom: 15px; 
+    border-radius: 5px;
+}
+
+.laravelbutton img {
     max-width: 100%; 
     height: auto; 
     margin-bottom: 15px; 
@@ -39,8 +46,8 @@ html, body {
 }
 
 
-.javascriptcontainer:hover,
-.laravelcontainer:hover {
+.javascriptbutton:hover,
+.laravelbutton:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
