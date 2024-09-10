@@ -4,6 +4,21 @@ html, body {
     display: flex;
     justify-content: center; 
     align-items: center;
+    background-image: url(Afbeeldingen/Codingbackground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.titel {
+    position: absolute;
+    top: 3%;
+}
+.titel h1 {
+    color: white;
+    font-size: 3em;
+    font-family: system-ui;
 }
 
 .grid-container {
@@ -29,6 +44,8 @@ html, body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    box-shadow: 0 0 10px 5px #80dfff;
+    transition: box-shadow 0.3s ease;
 }
 
 #javascriptbutton img {
@@ -48,12 +65,12 @@ html, body {
 
 #javascriptbutton:hover{
     transform: scale(1.05);
-    box-shadow: 0 8px 16px #f7df1e;
+    box-shadow: 0 0 20px 10px #f7df1e;
 }
 
 #laravelbutton:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px #f55247;
+    box-shadow: 0 0 20px 10px #f55247;
 }
 
 
