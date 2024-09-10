@@ -3,44 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina met Topbar en Hamburgermenu</title>
-    <!-- Link naar de externe CSS -->
-    <link rel="stylesheet" href="javascript.css">
+    <title>Hamburger Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-    <!-- De topbar -->
-    <div class="topbar">
-        <div class="logo">
-            <a href="#home">Logo</a>
+    <body>
+        <div class="navigation">
+            <div class="menuToggle"></div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-user"></i></span>
+                        <span class="titel">Account</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                        <span class="titel">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
         </div>
+    <script>
+        let navigation = document.querySelector('.navigation')
+        document.querySelector('.menuToggle').onclick = function(){
+            this.classList.toggle('active')
+            navigation.classList.toggle('active')
+    }
+    </script>
 
-        <!-- Hamburger menu-icoon -->
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-
-        <!-- Het menu -->
-        <div class="menu" id="menu">
-            <a href="#home">Home</a>
-            <a href="#about">Over ons</a>
-            <a href="#services">Diensten</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </div>
-
-    <!-- Hoofdinhoud van de pagina -->
-    <div class="content">
-        <h1>Welkom op onze pagina!</h1>
-        <p>Dit is een voorbeeldpagina met een topbar en een hamburgermenu voor mobiele apparaten.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod, tortor at malesuada dapibus, augue nulla facilisis quam, in ultricies justo eros a justo.</p>
-        <p>Scroll naar beneden om te zien dat de topbar bovenaan blijft zitten, zelfs als je scrolt.</p>
-    </div>
-
-
-    <script src="script.js"></script>
-
-</body>
+    </body>
 </html>
