@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  font-family: "Maax-Regular";
+  text-decoration: none;
+  color: black;
+  cursor: auto;
+}
+
+@font-face {
+  font-family: "Maax-Regular";
+  src: url(../fonts/maax-regular.woff2);
+}
+@font-face {
+  font-family: "Maax-Medium";
+  src: url(../fonts/maax-medium.woff2);
+}
+@font-face {
+  font-family: "Maax-Bold";
+  src: url(../fonts/maax-bold.woff2);
+}
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+.main .container .form-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.main .container .form-toggle button {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.main .container .form-toggle button.active {
+  color: #00365e;
+  border-bottom: 2px solid #00365e;
+}
+.main .container .form-toggle button:not(.active) {
+  color: #7f8c8d;
+}
+.main .container .form-toggle button:not(.active):hover {
+  color: #00365e;
+}
+.main .container .form {
+  display: none;
+}
+.main .container .form.active {
+  display: block;
+}
+.main .container .form .form-group {
+  margin-bottom: 1rem;
+  position: relative;
+}
+.main .container .form .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
+.main .container .form .form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+.main .container .form .form-group input:focus {
+  border-color: #00365e;
+  outline: none;
+}
+.main .container .form .form-group input:invalid {
+  border-color: #b50000;
+}
+.main .container .form .form-group .error-message {
+  color: #b50000;
+  font-size: 0.875rem;
+  position: absolute;
+  bottom: -1.25rem;
+  left: 0;
+  display: none;
+}
+.main .container .form .form-group.error .error-message {
+  display: block;
+}
+.main .container .form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #00365e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.main .container .form button:hover {
+  background-color: #00192b;
+}
