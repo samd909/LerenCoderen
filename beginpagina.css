@@ -4,13 +4,46 @@ html, body {
     display: flex;
     justify-content: center; 
     align-items: center;
-    background-image: url(Afbeeldingen/Codingbackground.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
+    background: black;
 }
 
+/* Matrix achtergrond */
+.matrix {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1; /* Zorg ervoor dat de matrix onder de inhoud ligt */
+}
+
+@keyframes rain {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* Regels code die vallen */
+.code {
+    position: absolute;
+    font-family: monospace;
+    color: lime;
+    font-size: 20px;
+    line-height: 1.2;
+    white-space: nowrap; /* Zorgt ervoor dat letters niet in een nieuwe regel komen */
+    animation: rain 5s linear infinite; /* Snellere animatie */
+    animation-delay: calc(-0.5s * var(--i)); /* Afhankelijk van de index van het element */
+    top: -50px; /* Begin 50px boven de bovenkant van het scherm */
+    opacity: 0.8; /* Maak ze iets doorzichtig */
+}
+
+/* Titel stijl */
 .titel {
     position: absolute;
     top: 3%;
@@ -19,8 +52,10 @@ html, body {
     color: white;
     font-size: 3em;
     font-family: system-ui;
+    z-index: 2; /* Zorg ervoor dat de titel boven de matrix ligt */
 }
 
+/* Grid container voor knoppen */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Zorgt voor responsieve kolommen */
@@ -29,6 +64,7 @@ html, body {
     max-width: 600px; /* Maximale breedte van de container */
     padding: 20px;
     height: 20%;
+    z-index: 2; /* Zorg ervoor dat de grid boven de matrix ligt */
 }
 
 #javascriptbutton,
@@ -44,17 +80,11 @@ html, body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    box-shadow: 0 0 10px 5px #80dfff;
+    box-shadow: 0 0 10px 5px lime;
     transition: box-shadow 0.3s ease;
 }
 
-#javascriptbutton img {
-    max-width: 100%; 
-    height: auto; 
-    margin-bottom: 15px; 
-    border-radius: 5px;
-}
-
+#javascriptbutton img,
 #laravelbutton img {
     max-width: 100%; 
     height: auto; 
@@ -62,8 +92,7 @@ html, body {
     border-radius: 5px;
 }
 
-
-#javascriptbutton:hover{
+#javascriptbutton:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px 10px #f7df1e;
 }
@@ -73,5 +102,14 @@ html, body {
     box-shadow: 0 0 20px 10px #f55247;
 }
 
+/* Hover kleur voor de matrix letters */
+.hover-effect {
+    color: #f7df1e; /* De kleur van de JavaScript knop hover */
+}
+
+/* Zorg dat de hover kleur ook voor de Laravel-knop werkt */
+.hover-effect-laravel {
+    color: #f55247; /* De kleur van de Laravel knop hover */
+}
 
 

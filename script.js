@@ -5,3 +5,4 @@ document.getElementById('javascriptbutton').addEventListener('click',()=> {
 document.getElementById('laravelbutton').addEventListener('click',()=> {
     window.location.href = 'laravel.html'
 })  
+

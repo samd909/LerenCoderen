@@ -3,35 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamburger Menu</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <title>Coding Thema Dashboard</title>
+    <link rel="stylesheet" href="javascript.css"> <!-- Update met je CSS-bestand -->
 </head>
-    <body>
-        <div class="navigation">
-            <div class="menuToggle"></div>
+<body>
+    <div class="matrix" id="matrix"></div>
+    
+    <header class="dashboard-header">
+        <div class="logo">Coding Academy</div>
+        <nav>
             <ul>
-                <li>
-                    <a href="#">
-                        <span class="icon"><i class="fa-solid fa-user"></i></span>
-                        <span class="titel">Account</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>
-                        <span class="titel">Sign Out</span>
-                    </a>
-                </li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Profile</a></li>
             </ul>
-        </div>
-    <script>
-        let navigation = document.querySelector('.navigation')
-        document.querySelector('.menuToggle').onclick = function(){
-            this.classList.toggle('active')
-            navigation.classList.toggle('active')
-    }
-    </script>
+        </nav>
+    </header>
 
-    </body>
+    <aside class="sidebar">
+        <h3>Categorieën</h3>
+        <ul>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">Python</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Data Science</a></li>
+            <li><a href="#">Meer...</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <section class="featured-courses">
+            <h2>Uitgelichte Cursussen</h2>
+            <div class="course-card">
+                <h3>JavaScript Basics</h3>
+                <p>Leer de basisprincipes van JavaScript.</p>
+                <button>Schrijf Nu In</button>
+            </div>
+            <div class="course-card">
+                <h3>Web Development</h3>
+                <p>Bouw je eerste website vanaf nul.</p>
+                <button>Schrijf Nu In</button>
+            </div>
+            <div class="course-card">
+                <h3>Data Science Intro</h3>
+                <p>Ontdek de wereld van data-analyse.</p>
+                <button>Schrijf Nu In</button>
+            </div>
+        </section>
+        
+        <section class="learning-paths">
+            <h2>Leren Paden</h2>
+            <div class="path-card">
+                <h3>Front-End Development</h3>
+                <p>Van HTML tot JavaScript-frameworks.</p>
+            </div>
+            <div class="path-card">
+                <h3>Back-End Development</h3>
+                <p>Leer hoe je server-side applicaties bouwt.</p>
+            </div>
+            <div class="path-card">
+                <h3>Data Science</h3>
+                <p>Gegevensanalyse, visualisatie en machine learning.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Coding Academy. Alle rechten voorbehouden.</p>
+        <ul>
+            <li><a href="#">Algemene Voorwaarden</a></li>
+            <li><a href="#">Privacybeleid</a></li>
+            <li><a href="#">Neem Contact Op</a></li>
+        </ul>
+    </footer>
+
+    <script src="code-rain.js"></script> <!-- Behoud je bestaande JavaScript -->
+</body>
 </html>

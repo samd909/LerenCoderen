@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Matrix achtergrond */
+.matrix {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  overflow: hidden;
+}
+
+@keyframes rain {
+  0% {
+      transform: translateY(-100%);
+  }
+  100% {
+      transform: translateY(100vh);
+  }
+}
+
+/* Regels code die vallen */
+.code {
+  position: absolute;
+  font-family: monospace;
+  color: lime;
+  font-size: 20px;
+  line-height: 1.2;
+  white-space: nowrap; /* Zorgt ervoor dat letters niet in een nieuwe regel komen */
+  animation: rain 5s linear infinite; /* Snellere animatie */
+  animation-delay: calc(-0.5s * var(--i)); /* Afhankelijk van de index van het element */
+}
+
+/* Content die boven de matrix animatie ligt */
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+
+
+
