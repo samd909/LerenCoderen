@@ -1,65 +1,150 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden;
+}
+
+/* Matrix achtergrond */
+.matrix {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  overflow: hidden;
+  z-index: 0; /* Zorg ervoor dat de matrix onder de inhoud ligt */
+}
+
+@keyframes rain {
+  0% {
+      transform: translateY(-100%);
   }
-  
-  body, html {
-    height: 100%;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
+  100% {
+      transform: translateY(100vh);
   }
-  
-  /* Matrix achtergrond */
-  .matrix {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background: black;
-    overflow: hidden;
-  }
-  
-  @keyframes rain {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(100vh);
-    }
-  }
-  
-  /* Regels code die vallen */
-  .code {
-    position: absolute;
-    font-family: monospace;
-    color: #f55247;
-    font-size: 20px;
-    line-height: 1.2;
-    white-space: nowrap; /* Zorgt ervoor dat letters niet in een nieuwe regel komen */
-    animation: rain 5s linear infinite; /* Snellere animatie */
-    animation-delay: calc(-0.5s * var(--i)); /* Afhankelijk van de index van het element */
-  }
-  
-  /* Content die boven de matrix animatie ligt */
-  .content {
-    position: relative;
-    z-index: 2;
-    color: white;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  p {
-    font-size: 1.5rem;
-  }
-  
-  
-  
-  
-  
+}
+
+/* Regels code die vallen */
+.code {
+  position: absolute;
+  font-family: monospace;
+  color: #f55247;
+  font-size: 20px;
+  line-height: 1.2;
+  white-space: nowrap; /* Zorgt ervoor dat letters niet in een nieuwe regel komen */
+  animation: rain 5s linear infinite; /* Snellere animatie */
+  animation-delay: calc(-0.5s * var(--i)); /* Afhankelijk van de index van het element */
+}
+
+/* Dashboard Styles */
+.dashboard-header {
+  background-color: #2d2d2d; /* Donkere header */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1; /* Zorg ervoor dat het boven de matrix ligt */
+  color: #f55247;
+  position: relative;
+}
+
+.dashboard-header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.dashboard-header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.dashboard-header nav ul li {
+  margin-left: 20px;
+}
+
+.dashboard-header nav ul li a {
+  color: #f55247;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.dashboard-header nav ul li a:hover {
+  color: #aa1409; 
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #1e1e1e;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  z-index: 1; /* Zorg ervoor dat het boven de matrix ligt */
+  color: #f55247;
+  position: relative;
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  color: #f55247;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  color: #aa1409; /* Lichtere gele kleur bij hover */
+}
+
+.sidebar img {
+  max-width: 100%; /* Ensures the image doesn't overflow */
+  margin-top: 150%; /* Pushes the image to the bottom */
+}
+
+
+#mainDiv {
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+
+.content-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  z-index: 2; /* Higher than the matrix background */
+}
+
+.main-content {
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center the text inside the div */
+  max-width: 800px; /* Optional: Limit the width of the content */
+  z-index: 3;
+  border-radius: 10px; /* Optional: Rounded corners for a modern look */
+}
+
