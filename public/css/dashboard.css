@@ -89,10 +89,15 @@ body {
   flex: 1;
   margin-right: 20px;
   text-align: center;
+  transition: transform 0.2s ease; /* Add a hover effect */
 }
 
 .card:last-child {
   margin-right: 0;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale effect on hover */
 }
 
 .card h3 {
@@ -107,8 +112,20 @@ body {
 
 /* Charts Section */
 .charts-section {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease; /* Transition for opacity */
+  visibility: hidden; /* Hide initially */
+}
+
+.charts-section.active {
+  opacity: 1; /* Fade in */
+  visibility: visible; /* Make visible when active */
+}
+/* New Charts Section */
+#home-charts {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 .chart {

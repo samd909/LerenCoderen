@@ -17,6 +17,7 @@
         <h2>Admin</h2>
         <ul>
           <li><a onclick="handleNav('home')">Home</a></li>
+          <li><a onclick="handleNav('question')">Question</a></li>
           <li><a onclick="handleNav('customer')">Customer</a></li>
           <li><a onclick="handleNav('settings')">Settings</a></li>
           <li><a onclick="handleNav('logout')">Logout</a></li>
@@ -29,7 +30,8 @@
           <input type="text" placeholder="Search..." />
         </header>
 
-        <section class="cards-section">
+        <!-- Home Section -->
+        <section class="cards-section" id="home">
           <div class="card">
             <h3>Users</h3>
             <p>1,500</p>
@@ -44,15 +46,65 @@
           </div>
         </section>
 
-        <section class="charts-section">
+        <!-- Question Section -->
+        <section class="charts-section" id="question" style="display: none">
           <div class="chart">
-            <h3>Monthly Sales</h3>
-            <div class="chart-placeholder">Chart Area</div>
+            <h3>Question Maker</h3>
+            <div class="chart-placeholder">
+              <label for="title">Title</label>
+              <input type="text" id="title" placeholder="Enter the title..." />
+
+              <label for="description">Description</label>
+              <textarea
+                id="description"
+                rows="4"
+                placeholder="Enter the description..."
+              ></textarea>
+
+              <label for="question">Question</label>
+              <input
+                type="text"
+                id="question"
+                placeholder="Enter your question..."
+              />
+
+              <label>Checklist</label>
+              <div>
+                <input type="checkbox" id="option1" />
+                <label for="option1">Option 1</label>
+              </div>
+              <div>
+                <input type="checkbox" id="option2" />
+                <label for="option2">Option 2</label>
+              </div>
+              <div>
+                <input type="checkbox" id="option3" />
+                <label for="option3">Option 3</label>
+              </div>
+
+              <button type="submit" id="submit-button">Submit</button>
+            </div>
           </div>
+        </section>
+
+        <!-- Customer Section -->
+        <section class="charts-section" id="customer" style="display: none">
           <div class="chart">
-            <h3>Visitor Stats</h3>
-            <div class="chart-placeholder">Chart Area</div>
+            <h3>Customer Feedback</h3>
+            <div class="chart-placeholder">Feedback Area</div>
           </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section class="charts-section" id="settings" style="display: none">
+          <h3>Settings</h3>
+          <p>Manage your settings here.</p>
+        </section>
+
+        <!-- Logout Section -->
+        <section class="charts-section" id="logout" style="display: none">
+          <h3>Logout</h3>
+          <p>You have been logged out.</p>
         </section>
       </div>
     </div>
