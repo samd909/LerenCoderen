@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/locker.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <title>locker</title>
+    <link rel="icon" href="../images/locker.png" type="image/png" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/lobby">PLAY</a>
+        <a href="/locker" class="active">LOCKER</a>
+        <a>ITEM SHOP</a>
+        <a class="disable">BATTLE PASS</a>
+        <a>CARREER</a>
+      </nav>
+      <div class="profile"></div>
+    </header>
+    <main>
+      <div class="card">
+        <header>
+          <p>OUTFIT</p>
+        </header>
+        <div class="content">
+          <div class="item empty"></div>
+          <div class="item common">2</div>
+          <div class="item rare">3</div>
+          <div class="item epic">4</div>
+          <div class="item legendary">5</div>
+        </div>
+      </div>
+      <div class="player"></div>
+    </main>
+    <script src="js/global/cl_request.js"></script>
+    <script src="js/cl_locker.js"></script>
+  </body>
+</html>
